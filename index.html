@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bill Splitter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- 🔹 Google Login Section -->
+        <button id="googleLogin">Login with Google</button>
+        <button id="logoutBtn" style="display: none;">Logout</button>
+        <p id="userInfo"></p>
+
+        <h1>Bill Splitter</h1>
+
+        <label for="totalAmount">Total Amount (₹):</label>
+        <input type="number" id="totalAmount" placeholder="Enter amount">
+
+        <label for="splitType">Choose Split Type:</label>
+        <select id="splitType">
+            <option value="equal">Equal Split</option>
+            <option value="custom">Custom Amounts</option>
+            <option value="percentage">Percentage-Based</option>
+        </select>
+
+        <div id="numPeopleContainer">
+            <label for="numPeople">Number of People:</label>
+            <input type="number" id="numPeople" placeholder="Enter number">
+        </div>
+
+        <div id="customInputs"></div> <!-- For custom splits -->
+
+        <button id="calculateBtn">Split Bill</button>
+        <button id="resetBtn">Reset</button>
+
+        <h2>Result:</h2>
+        <div id="result"></div>
+
+        <!-- 🔹 Group Section -->
+        <h2>Group Members</h2>
+        <input type="text" id="memberName" placeholder="Enter your name">
+        <button id="addMemberBtn">Add Member</button>
+        <ul id="groupMembers"></ul>
+    </div>
+
+    <!--  Firebase Integration -->
+    <script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-auth-compat.js"></script>
+
+    <!--  Load script.js only after Firebase is ready -->
+    <script src="script.js"></script>
+</body>
+</html>
